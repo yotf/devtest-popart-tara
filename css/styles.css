@@ -1,0 +1,751 @@
+/* CSS Reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* End of CSS Reset */
+.icon-3d {
+  -webkit-animation: icon3d 200ms 10;
+  animation: icon3d 200ms 10;
+  z-index: 100;
+}
+.icon-3d:hover {
+  -webkit-animation: icon3d 200ms infinite;
+  animation: icon3d 200ms infinite;
+}
+
+.pulse-animation {
+  transition: filter 0.5 ease-in-out;
+  animation: pulse 1s infinite;
+}
+.pulse-animation:hover {
+  filter: drop-shadow(0 0 10px #d5ff2f);
+  animation: none;
+}
+
+@keyframes pulse {
+  0% {
+    filter: drop-shadow(0 0 5px #d5ff2f); /* Initial shadow */
+  }
+  50% {
+    filter: drop-shadow(0 0 7px #d5ff2f); /* Increased shadow size */
+  }
+  100% {
+    filter: drop-shadow(0 0 5px #d5ff2f); /* Return to the initial shadow */
+  }
+}
+@keyframes floating {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(10px); /* Adjust the floating distance */
+  }
+}
+@keyframes icon3d {
+  0% {
+    text-shadow: 5px 4px #d5ff2f, -5px -6px #ff6f1f;
+  }
+  25% {
+    text-shadow: -5px -6px #d5ff2f, 5px 4px #ff6f1f;
+  }
+  50% {
+    text-shadow: 5px -4px #d5ff2f, -8px 4px #ff6f1f;
+  }
+  75% {
+    text-shadow: -8px -4px #d5ff2f, -5px -4px #ff6f1f;
+  }
+  100% {
+    text-shadow: -5px 0 #d5ff2f, 5px -4px #ff6f1f;
+  }
+}
+@keyframes colorChangeYellow {
+  from {
+    stroke: black;
+  }
+  to {
+    stroke: #d5ff2f;
+  }
+}
+@keyframes colorChangeOrange {
+  from {
+    stroke: black;
+  }
+  to {
+    stroke: #ff6f1f;
+  }
+}
+@keyframes fillColor {
+  from {
+    fill: black;
+  }
+  to {
+    fill: #d5ff2f;
+  }
+}
+.pygear-circuit line,
+.pygear-circuit path {
+  stroke: #1d0945;
+}
+
+.pygear-circuit circle,
+.pygear-circuit .triange {
+  fill: #1d0945;
+  stroke: #d5ff2f;
+}
+
+.pygear-animation line:nth-child(1),
+.pygear-animation path:nth-child(1) {
+  animation: colorChangeOrange 1s linear forwards;
+}
+.pygear-animation line.hexagon1,
+.pygear-animation path.hexagon1 {
+  animation: colorChangeYellow 1s linear forwards 0.5s;
+}
+.pygear-animation line:nth-child(2), .pygear-animation line.second-iteration-first,
+.pygear-animation path:nth-child(2),
+.pygear-animation path.second-iteration-first {
+  animation: colorChangeOrange 1s linear forwards 1.5s;
+}
+.pygear-animation line.hexagon2, .pygear-animation line.hexagon5,
+.pygear-animation path.hexagon2,
+.pygear-animation path.hexagon5 {
+  animation: colorChangeYellow 1s linear forwards 2s;
+}
+.pygear-animation line:nth-child(3), .pygear-animation line.second-iteration-second,
+.pygear-animation path:nth-child(3),
+.pygear-animation path.second-iteration-second {
+  animation: colorChangeOrange 1s linear forwards 2s;
+}
+.pygear-animation line.hexagon3, .pygear-animation line.hexagon6,
+.pygear-animation path.hexagon3,
+.pygear-animation path.hexagon6 {
+  animation: colorChangeYellow 1s linear forwards 2.5s;
+}
+.pygear-animation line:nth-child(4), .pygear-animation line.second-iteration-third,
+.pygear-animation path:nth-child(4),
+.pygear-animation path.second-iteration-third {
+  animation: colorChangeOrange 1s linear forwards 3s;
+}
+.pygear-animation line.hexagon4,
+.pygear-animation path.hexagon4 {
+  animation: colorChangeYellow 1s linear forwards 3.5s;
+}
+.pygear-animation line.last-line,
+.pygear-animation path.last-line {
+  animation: colorChangeOrange 1s linear forwards 4s;
+}
+
+.pygear-animation circle:nth-of-type(1) {
+  animation: fillColor 1s linear forwards 0.5s;
+}
+.pygear-animation circle:nth-of-type(2), .pygear-animation circle:nth-of-type(7) {
+  animation: fillColor 1s linear forwards 1.5s;
+}
+.pygear-animation circle:nth-of-type(3), .pygear-animation circle:nth-of-type(4), .pygear-animation circle:last-of-type {
+  animation: fillColor 1s linear forwards 2.2s;
+}
+.pygear-animation circle:nth-of-type(5), .pygear-animation circle:nth-of-type(6) {
+  animation: fillColor 1s linear forwards 3.2;
+}
+
+.pygear-animation .triangle.first {
+  animation: fillColor 1s linear forwards 1.2s;
+}
+.pygear-animation .triangle.second {
+  animation: fillColor 1s linear forwards 1.8s;
+}
+.pygear-animation .triangle.third {
+  animation: fillColor 1s linear forwards 2.2s;
+}
+.pygear-animation .triangle.last {
+  animation: fillColor 1s linear forwards 2.8s;
+}
+
+@font-face {
+  font-family: "Aspergit";
+  src: url(../fonts/AspergitBold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Futura PT";
+  src: url(../fonts/FuturaPTLight.otf) format("opentype");
+}
+.button-container {
+  position: relative;
+  width: 33%;
+  max-width: 200px; /* Adjust the size of the container */
+  height: 65px;
+  overflow: hidden;
+}
+
+.button-image {
+  width: 100%;
+  height: 100%;
+  background: url(../img/button.svg) center/contain no-repeat; /* Replace 'your-image.jpg' with your image file */
+}
+
+.button-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #361281;
+  font-weight: bold;
+  font-family: "Aspergit";
+  text-transform: uppercase;
+}
+
+.icon-3d {
+  -webkit-animation: icon3d 200ms 10;
+  animation: icon3d 200ms 10;
+  z-index: 100;
+}
+.icon-3d:hover {
+  -webkit-animation: icon3d 200ms infinite;
+  animation: icon3d 200ms infinite;
+}
+
+.pulse-animation {
+  transition: filter 0.5 ease-in-out;
+  animation: pulse 1s infinite;
+}
+.pulse-animation:hover {
+  filter: drop-shadow(0 0 10px #d5ff2f);
+  animation: none;
+}
+
+@keyframes pulse {
+  0% {
+    filter: drop-shadow(0 0 5px #d5ff2f); /* Initial shadow */
+  }
+  50% {
+    filter: drop-shadow(0 0 7px #d5ff2f); /* Increased shadow size */
+  }
+  100% {
+    filter: drop-shadow(0 0 5px #d5ff2f); /* Return to the initial shadow */
+  }
+}
+@keyframes floating {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(10px); /* Adjust the floating distance */
+  }
+}
+@keyframes icon3d {
+  0% {
+    text-shadow: 5px 4px #d5ff2f, -5px -6px #ff6f1f;
+  }
+  25% {
+    text-shadow: -5px -6px #d5ff2f, 5px 4px #ff6f1f;
+  }
+  50% {
+    text-shadow: 5px -4px #d5ff2f, -8px 4px #ff6f1f;
+  }
+  75% {
+    text-shadow: -8px -4px #d5ff2f, -5px -4px #ff6f1f;
+  }
+  100% {
+    text-shadow: -5px 0 #d5ff2f, 5px -4px #ff6f1f;
+  }
+}
+@keyframes colorChangeYellow {
+  from {
+    stroke: black;
+  }
+  to {
+    stroke: #d5ff2f;
+  }
+}
+@keyframes colorChangeOrange {
+  from {
+    stroke: black;
+  }
+  to {
+    stroke: #ff6f1f;
+  }
+}
+@keyframes fillColor {
+  from {
+    fill: black;
+  }
+  to {
+    fill: #d5ff2f;
+  }
+}
+.pygear-circuit line,
+.pygear-circuit path {
+  stroke: #1d0945;
+}
+
+.pygear-circuit circle,
+.pygear-circuit .triange {
+  fill: #1d0945;
+  stroke: #d5ff2f;
+}
+
+.pygear-animation line:nth-child(1),
+.pygear-animation path:nth-child(1) {
+  animation: colorChangeOrange 1s linear forwards;
+}
+.pygear-animation line.hexagon1,
+.pygear-animation path.hexagon1 {
+  animation: colorChangeYellow 1s linear forwards 0.5s;
+}
+.pygear-animation line:nth-child(2), .pygear-animation line.second-iteration-first,
+.pygear-animation path:nth-child(2),
+.pygear-animation path.second-iteration-first {
+  animation: colorChangeOrange 1s linear forwards 1.5s;
+}
+.pygear-animation line.hexagon2, .pygear-animation line.hexagon5,
+.pygear-animation path.hexagon2,
+.pygear-animation path.hexagon5 {
+  animation: colorChangeYellow 1s linear forwards 2s;
+}
+.pygear-animation line:nth-child(3), .pygear-animation line.second-iteration-second,
+.pygear-animation path:nth-child(3),
+.pygear-animation path.second-iteration-second {
+  animation: colorChangeOrange 1s linear forwards 2s;
+}
+.pygear-animation line.hexagon3, .pygear-animation line.hexagon6,
+.pygear-animation path.hexagon3,
+.pygear-animation path.hexagon6 {
+  animation: colorChangeYellow 1s linear forwards 2.5s;
+}
+.pygear-animation line:nth-child(4), .pygear-animation line.second-iteration-third,
+.pygear-animation path:nth-child(4),
+.pygear-animation path.second-iteration-third {
+  animation: colorChangeOrange 1s linear forwards 3s;
+}
+.pygear-animation line.hexagon4,
+.pygear-animation path.hexagon4 {
+  animation: colorChangeYellow 1s linear forwards 3.5s;
+}
+.pygear-animation line.last-line,
+.pygear-animation path.last-line {
+  animation: colorChangeOrange 1s linear forwards 4s;
+}
+
+.pygear-animation circle:nth-of-type(1) {
+  animation: fillColor 1s linear forwards 0.5s;
+}
+.pygear-animation circle:nth-of-type(2), .pygear-animation circle:nth-of-type(7) {
+  animation: fillColor 1s linear forwards 1.5s;
+}
+.pygear-animation circle:nth-of-type(3), .pygear-animation circle:nth-of-type(4), .pygear-animation circle:last-of-type {
+  animation: fillColor 1s linear forwards 2.2s;
+}
+.pygear-animation circle:nth-of-type(5), .pygear-animation circle:nth-of-type(6) {
+  animation: fillColor 1s linear forwards 3.2;
+}
+
+.pygear-animation .triangle.first {
+  animation: fillColor 1s linear forwards 1.2s;
+}
+.pygear-animation .triangle.second {
+  animation: fillColor 1s linear forwards 1.8s;
+}
+.pygear-animation .triangle.third {
+  animation: fillColor 1s linear forwards 2.2s;
+}
+.pygear-animation .triangle.last {
+  animation: fillColor 1s linear forwards 2.8s;
+}
+
+.floating-elements {
+  animation: floating 2s infinite alternate ease-in-out;
+}
+.floating-elements img {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.6;
+}
+.floating-elements img:nth-child(1) {
+  top: 4vw;
+  left: 52vw;
+  width: 3vw;
+}
+.floating-elements img:nth-child(2) {
+  left: 35vw;
+  top: 33vw;
+  width: 5vw;
+}
+.floating-elements img:nth-child(3) {
+  left: 69vw;
+  top: 36vw;
+  width: 3vw;
+}
+.floating-elements img:nth-child(4) {
+  top: 45vw;
+  left: 52vw;
+  width: 3vw;
+}
+.floating-elements img:nth-child(5) {
+  left: 0;
+  top: 44vw;
+  height: 9vw;
+}
+.floating-elements img:nth-child(6) {
+  top: 97vw;
+  right: 0;
+  height: 9vw;
+}
+.floating-elements img:nth-child(7) {
+  top: 119vw;
+  right: 25vw;
+  width: 3vw;
+}
+.floating-elements img:nth-child(8) {
+  top: 118vw;
+  right: 5vw;
+  width: 5vw;
+}
+.floating-elements img:nth-child(9) {
+  top: 150vw;
+  left: 0;
+  height: 9vw;
+}
+.floating-elements img:nth-child(10) {
+  top: 173vw;
+  right: 7vw;
+  width: 3vw;
+}
+.floating-elements img:nth-child(11) {
+  top: 189vw;
+  right: 0;
+  opacity: 0.4;
+  height: 17vw;
+}
+.floating-elements img:nth-child(12) {
+  top: 196vw;
+  left: 31vw;
+  width: 5vw;
+}
+
+h1 {
+  align-self: center;
+  justify-self: center;
+  font-family: "Aspergit";
+  font-size: 5vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 117%; /* 132.21px */
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+h2 {
+  font-family: "Aspergit";
+  font-size: 4vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 117%; /* 109.98px */
+  letter-spacing: -2.82px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+h4 {
+  font-family: Aspergit;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 50px; /* 113.636% */
+  letter-spacing: 0.88px;
+  color: #ffffff;
+}
+@media screen and (max-width: 768px) {
+  h4 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+.highlight {
+  color: #d5ff2f;
+}
+
+p {
+  font-family: "Futura PT";
+  font-size: 30px;
+  line-height: 33px;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 1200px) {
+  p {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+/* Media query for small screens (e.g., large phones) */
+@media screen and (max-width: 768px) {
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+body {
+  background-color: #361281;
+  height: 100000px;
+  position: relative;
+}
+body header {
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  width: 85vw;
+  position: sticky;
+  margin: 0 auto;
+  z-index: 1;
+  background: linear-gradient(rgb(54, 18, 129), rgba(255, 255, 255, 0)); /* Linear gradient for fade effect */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  padding-bottom: 100px;
+}
+body header nav {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+body header nav a {
+  text-decoration: none;
+  display: inline-block;
+  font-family: "Futura PT";
+  color: #ffffff;
+  line-height: 90%;
+  font-size: 28px;
+  transition: color 0.2s linear 0s;
+}
+body header nav a:hover {
+  color: #d5ff2f;
+}
+body header nav a:first-child {
+  border-right: solid 2px rgba(255, 255, 255, 0.3);
+  padding-right: 9px;
+}
+body .social-menu {
+  position: fixed;
+  right: 24px;
+  top: 258px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-size: 32px;
+  z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  body .social-menu {
+    font-size: 24px;
+  }
+}
+body .social-menu .fa-discord,
+body .social-menu .fa-youtube {
+  font-size: 28px;
+}
+@media screen and (max-width: 768px) {
+  body .social-menu .fa-discord,
+  body .social-menu .fa-youtube {
+    font-size: 20px;
+  }
+}
+body .social-menu a {
+  color: #ffffff;
+  text-align: center;
+}
+body .page-layout {
+  display: flex;
+  flex-direction: column;
+  width: 81%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding-top: 14vw;
+  margin-top: -100px;
+  gap: 2em;
+}
+body .page-layout .landing {
+  display: flex;
+  flex-direction: column;
+}
+body .page-layout .landing .join-section {
+  display: block;
+  align-self: end;
+  width: 42%;
+}
+@media screen and (max-width: 768px) {
+  body .page-layout .landing .join-section {
+    width: 70%;
+  }
+}
+body .page-layout .landing .join-section .button-container {
+  margin-top: 1em;
+}
+body .page-layout .landing-image {
+  align-self: center;
+  margin-top: 3em;
+  opacity: 0.7;
+  width: 100%;
+  margin-top: 16vw;
+}
+body .page-layout .what-is-pygear {
+  width: 80%;
+  align-self: start;
+  margin-top: 12.7vw;
+}
+body .page-layout h2 {
+  align-self: start;
+}
+body .page-layout .pygear-circuit {
+  width: 80%;
+  align-self: center;
+  margin-top: 2em;
+}
+body .page-layout .why-us-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 150px 100px; /* Row gap is 150px, column gap is 100px */
+}
+@media screen and (max-width: 768px) {
+  body .page-layout .why-us-section {
+    grid-template-columns: 1fr;
+    grid-gap: 50px 0px;
+  }
+}
+body .page-layout .why-us-section .why-us-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

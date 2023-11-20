@@ -1,0 +1,74 @@
+@import "animations";
+
+.floating-elements {
+  animation: floating 2s infinite alternate ease-in-out;
+  img {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.6;
+  }
+  img:nth-child(1) {
+    top: 4vw;
+    left: 52vw;
+    width: 3vw;
+  }
+  img:nth-child(2) {
+    left: 35vw;
+    top: 33vw;
+    width: 5vw;
+  }
+  img:nth-child(3) {
+    left: 69vw;
+    top: 36vw;
+    width: 3vw;
+  }
+
+  img:nth-child(4) {
+    top: 45vw;
+    left: 52vw;
+    width: 3vw;
+  }
+  img:nth-child(5) {
+    left: 0;
+    top: 44vw;
+    height: 9vw;
+  }
+
+  img:nth-child(6) {
+    top: 97vw;
+    right: 0;
+    height: 9vw;
+  }
+  img:nth-child(7) {
+    top: 119vw;
+    right: 25vw;
+    width: 3vw;
+  }
+  img:nth-child(8) {
+    top: 118vw;
+    right: 5vw;
+    width: 5vw;
+  }
+  img:nth-child(9) {
+    top: 150vw;
+    left: 0;
+    height: 9vw;
+  }
+  img:nth-child(10) {
+    top: 173vw;
+    right: 7vw;
+    width: 3vw;
+  }
+  img:nth-child(11) {
+    top: 189vw;
+    right: 0;
+    opacity: 0.4;
+    height: 17vw;
+  }
+  img:nth-child(12) {
+    top: 196vw;
+    left: 31vw;
+    width: 5vw;
+    //opacity: 0.4;
+  }
+}

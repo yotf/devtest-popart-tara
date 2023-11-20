@@ -1,0 +1,27 @@
+@import "variables";
+.button-container {
+  position: relative;
+  width: 33%;
+  max-width: 200px; /* Adjust the size of the container */
+  height: 65px;
+  overflow: hidden;
+}
+
+.button-image {
+  width: 100%;
+  height: 100%;
+  background: url(../img/button.svg) center/contain no-repeat; /* Replace 'your-image.jpg' with your image file */
+}
+
+.button-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $background-color-deep-indigo;
+  font-weight: bold;
+  font-family: "Aspergit";
+  text-transform: uppercase;
+}
+
+

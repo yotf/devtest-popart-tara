@@ -1,0 +1,181 @@
+@import "variables";
+
+.icon-3d {
+  //  padding: 10px;
+  -webkit-animation: icon3d 200ms 10;
+  animation: icon3d 200ms 10;
+  z-index: 100;
+  &:hover {
+    -webkit-animation: icon3d 200ms infinite;
+    animation: icon3d 200ms infinite;
+  }
+}
+
+.pulse-animation {
+  transition: filter 0.5 ease-in-out;
+  //transition: drop-shadow 0.5s ease-in-out;
+  animation: pulse 1s infinite;
+
+  &:hover {
+    filter: drop-shadow(0 0 10px $bright-yellow-green);
+    animation: none;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    filter: drop-shadow(0 0 5px $bright-yellow-green); /* Initial shadow */
+  }
+  50% {
+    filter: drop-shadow(
+      0 0 7px $bright-yellow-green
+    ); /* Increased shadow size */
+  }
+  100% {
+    filter: drop-shadow(
+      0 0 5px $bright-yellow-green
+    ); /* Return to the initial shadow */
+  }
+}
+@keyframes floating {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(10px); /* Adjust the floating distance */
+  }
+}
+
+@keyframes icon3d {
+  0% {
+    text-shadow: 5px 4px $bright-yellow-green, -5px -6px $electric-orange;
+  }
+  25% {
+    text-shadow: -5px -6px $bright-yellow-green, 5px 4px $electric-orange;
+  }
+  50% {
+    text-shadow: 5px -4px $bright-yellow-green, -8px 4px $electric-orange;
+  }
+  75% {
+    text-shadow: -8px -4px $bright-yellow-green, -5px -4px $electric-orange;
+  }
+  100% {
+    text-shadow: -5px 0 $bright-yellow-green, 5px -4px $electric-orange;
+  }
+}
+
+@keyframes colorChangeYellow {
+  from {
+    stroke: black;
+  }
+  to {
+    stroke: $bright-yellow-green;
+  }
+}
+
+@keyframes colorChangeOrange {
+  from {
+    stroke: black;
+  }
+  to {
+    stroke: $electric-orange;
+  }
+}
+
+@keyframes fillColor {
+  from {
+    fill: black;
+  }
+  to {
+    fill: $bright-yellow-green;
+  }
+}
+
+.pygear-circuit line,
+.pygear-circuit path {
+  stroke: #1d0945;
+}
+
+.pygear-circuit circle,
+.pygear-circuit .triange {
+  fill: #1d0945;
+  stroke: $bright-yellow-green;
+}
+
+.pygear-animation line,
+.pygear-animation path {
+  //stroke: black;
+
+  &:nth-child(1) {
+    animation: colorChangeOrange 1s linear forwards;
+  }
+  &.hexagon1 {
+    animation: colorChangeYellow 1s linear forwards 0.5s;
+  }
+
+  &:nth-child(2),
+  &.second-iteration-first {
+    animation: colorChangeOrange 1s linear forwards 1.5s;
+  }
+
+  &.hexagon2,
+  &.hexagon5 {
+    animation: colorChangeYellow 1s linear forwards 2s;
+  }
+  &:nth-child(3),
+  &.second-iteration-second {
+    animation: colorChangeOrange 1s linear forwards 2s;
+  }
+  &.hexagon3,
+  &.hexagon6 {
+    animation: colorChangeYellow 1s linear forwards 2.5s;
+  }
+  &:nth-child(4),
+  &.second-iteration-third {
+    animation: colorChangeOrange 1s linear forwards 3s;
+  }
+
+  &.hexagon4 {
+    animation: colorChangeYellow 1s linear forwards 3.5s;
+  }
+
+  &.last-line {
+    animation: colorChangeOrange 1s linear forwards 4s;
+  }
+}
+
+.pygear-animation circle {
+  &:nth-of-type(1) {
+    animation: fillColor 1s linear forwards 0.5s;
+  }
+  &:nth-of-type(2),
+  &:nth-of-type(7) {
+    animation: fillColor 1s linear forwards 1.5s;
+  }
+
+  &:nth-of-type(3),
+  &:nth-of-type(4),
+  &:last-of-type {
+    animation: fillColor 1s linear forwards 2.2s;
+  }
+
+  &:nth-of-type(5),
+  &:nth-of-type(6) {
+    animation: fillColor 1s linear forwards 3.2;
+  }
+}
+
+.pygear-animation .triangle {
+  &.first {
+    animation: fillColor 1s linear forwards 1.2s;
+  }
+  &.second {
+    animation: fillColor 1s linear forwards 1.8s;
+  }
+  &.third {
+    animation: fillColor 1s linear forwards 2.2s;
+  }
+  &.last {
+    animation: fillColor 1s linear forwards 2.8s;
+  }
+}

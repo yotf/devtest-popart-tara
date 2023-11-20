@@ -1,0 +1,214 @@
+@import "reset";
+@import "variables";
+@import "animations";
+@import "fonts";
+@import "button";
+@import "background";
+
+h1 {
+  align-self: center;
+  justify-self: center;
+  font-family: "Aspergit";
+  font-size: 5vw; // 113px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 117%; /* 132.21px */
+  text-transform: uppercase;
+  color: $text-color-white;
+}
+
+h2 {
+  font-family: "Aspergit";
+  font-size: 4vw; // 94px
+  font-style: normal;
+  font-weight: 700;
+  line-height: 117%; /* 109.98px */
+  letter-spacing: -2.82px;
+  text-transform: uppercase;
+  color: $text-color-white;
+}
+h4 {
+  font-family: Aspergit;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 50px; /* 113.636% */
+  letter-spacing: 0.88px;
+  color: $text-color-white;
+  @media screen and (max-width: 768px) {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+.highlight {
+  color: $bright-yellow-green;
+}
+
+p {
+  font-family: "Futura PT";
+  font-size: 30px;
+  line-height: 33px;
+
+  //letter-spacing: -1.2px;
+  color: $text-color-white;
+}
+@media screen and (max-width: 1200px) {
+  p {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+/* Media query for small screens (e.g., large phones) */
+@media screen and (max-width: 768px) {
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+body {
+  background-color: $background-color-deep-indigo;
+  height: 100000px;
+  position: relative;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    width: 85vw;
+    position: sticky;
+    margin: 0 auto;
+    z-index: 1;
+    background: linear-gradient(
+      rgba(54, 18, 129, 1),
+      rgba(255, 255, 255, 0)
+    ); /* Linear gradient for fade effect */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    padding-bottom: 100px;
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+
+      a {
+        text-decoration: none;
+        display: inline-block;
+        font-family: "Futura PT";
+        color: $text-color-white;
+        line-height: 90%;
+        font-size: 28px;
+        transition: color 0.2s linear 0s;
+
+        &:hover {
+          color: $bright-yellow-green;
+        }
+        &:first-child {
+          border-right: solid 2px rgb(255, 255, 255, 0.3);
+          padding-right: 9px;
+        }
+      }
+    }
+  }
+
+  .social-menu {
+    position: fixed;
+    right: 24px;
+    top: 258px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-size: 32px;
+    z-index: 1;
+
+    @media screen and (max-width: 768px) {
+      font-size: 24px;
+    }
+    .fa-discord,
+    .fa-youtube {
+      font-size: 28px;
+      @media screen and (max-width: 768px) {
+        font-size: 20px;
+      }
+    }
+
+    a {
+      color: $text-color-white;
+      text-align: center;
+    }
+  }
+  .page-layout {
+    display: flex;
+    flex-direction: column;
+    width: 81%;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto;
+    padding-top: 14vw;
+    margin-top: -100px;
+    gap: 2em;
+
+    .landing {
+      display: flex;
+      flex-direction: column;
+      .join-section {
+        display: block;
+        align-self: end;
+        width: 42%;
+        @media screen and (max-width: 768px) {
+          width: 70%;
+        }
+
+        .button-container {
+          margin-top: 1em;
+        }
+      }
+    }
+
+    .landing-image {
+      align-self: center;
+      margin-top: 3em;
+      opacity: 0.7;
+      width: 100%;
+      margin-top: 16vw;
+    }
+
+    .what-is-pygear {
+      width: 80%;
+      align-self: start;
+      margin-top: 12.7vw;
+    }
+
+    h2 {
+      align-self: start;
+    }
+
+    .pygear-circuit {
+      width: 80%;
+      align-self: center;
+      margin-top: 2em;
+    }
+
+    .why-us-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 150px 100px; /* Row gap is 150px, column gap is 100px */
+      @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+        grid-gap: 50px 0px;
+      }
+
+      .why-us-item {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+  }
+}
